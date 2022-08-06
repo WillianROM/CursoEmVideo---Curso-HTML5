@@ -11,7 +11,7 @@ body{
 
 /*Interface*/
 div#interface{
-    width: 1000px;
+    width: 1040px;
     background-color: rgb(227, 226, 235);
     margin: -20px auto 0px auto; /*Margin é a aréa externa do objeto*/
     /*margin: 10px (Em cima) 10px (Direita) 10px (Baixo) 10px (Esquerda);*/
@@ -26,8 +26,37 @@ div#interface{
 header#cabecalho img#icone{
     position: absolute;
     left: 780px;
-    top: 40px;
+    top: 80px;
 }
+
+header#cabecalho{
+    border-bottom: 1px #606060 double;
+    /*border-bottom: Largura da borda em pixels, cor da borda, formato da borda (solid, dashed, dotted, double);*/
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 90px; /*no-repeat para não repetir a imagem*/
+                                                               /*deslocamento lateral, deslocamento vertical*/   
+    /*Foi colocado a locomarca no fundo da página dentro do cabeçalho*/                                                                     
+}
+
+
+header#cabecalho h1{
+    font-family: Arial, sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+        /*deslocamento, deslocamento vertical, espalhamento, cor */
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2{
+    font-family: Arial, sans-serif;
+    color: #888888;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px;
+}
+
 
 /* Formatação de imagens com legendas*/
 figure.foto-legenda{
@@ -68,7 +97,7 @@ nav#menu > ul{
     text-transform: uppercase;
     position: absolute;
     top: -20px;
-    left: 300px;
+    left: 400px;
 }
 
 nav#menu h1{

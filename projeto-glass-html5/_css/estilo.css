@@ -5,15 +5,35 @@ p{
     text-indent: 50px;
 }
 body{
-    background-color: hsla(165,81%,93%,0.5);
+    background-color: rgba(110, 121, 146, 0.5);
     color: rgba(0,0,0,0.0.8);
+}
+
+/*Interface*/
+div#interface{
+    width: 1000px;
+    background-color: rgb(227, 226, 235);
+    margin: -20px auto 0px auto; /*Margin é a aréa externa do objeto*/
+    /*margin: 10px (Em cima) 10px (Direita) 10px (Baixo) 10px (Esquerda);*/
+    /*auto: será ajustado automaticamente*/
+    box-shadow: 0px 0px 10px black; /*Sombra em volta do objeto*/
+    /*descolamento lateral, verical, espalhamento da sombra, cor da sombra*/
+    padding: 10px; /*Padding é o espaço interno do objetio*/
+     /*paddinf: 10px (Em cima) 10px (Direita) 10px (Baixo) 10px (Esquerda); - Se colocar uma única vez, o nevegador vai considerar o valor para todos os lados do paddin*/
+}
+
+/*Atualizar o posicionamento do óculos*/
+header#cabecalho img#icone{
+    position: absolute;
+    left: 780px;
+    top: 40px;
 }
 
 /* Formatação de imagens com legendas*/
 figure.foto-legenda{
     position: relative;
     border:8px solid white;
-    box-shadow: 1px 1px 4px black;
+    box-shadow: 1px 1px 4px rgba(0,0,0,.5);
 }
 
 figure.foto-legenda > img{

@@ -1,4 +1,12 @@
 @charset "UTF-8";
+/*Dá para usar fontes públicas do https://fonts.google.com/ foi usado no header#cabecalho h2*/
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+
 
 p{
     text-align: justify;
@@ -40,7 +48,7 @@ header#cabecalho{
 
 
 header#cabecalho h1{
-    font-family: Arial, sans-serif;
+    font-family: 'FonteLogo', sans-serif;
     font-size: 30pt;
     color: #606060;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
@@ -50,7 +58,7 @@ header#cabecalho h1{
 }
 
 header#cabecalho h2{
-    font-family: Arial, sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     color: #888888;
     font-size: 15pt;
     padding: 0px;

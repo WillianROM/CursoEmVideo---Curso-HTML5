@@ -145,6 +145,27 @@ section#corpo{
     padding-right: 15px; /*Para que a linha criado anteriormente não fique grudado ao texto*/
 }
 
+/*Formatação da TABELA*/
+table#tabelaspec{
+    border: 1px solid #606060;
+    border-spacing: 0px; /*Referente aos espaços entre as células <td>*/
+    margin-left: auto;
+    margin-right: auto;
+    /*As margin-left: auto; e  margin-right: auto; foram usados em conjunto para deixar a tabela centralizado na página*/
+
+}
+
+table#tabelaspec td{
+    border: 1px solid #606060;
+    padding: 10px; /*Para colocar espaço interno dentro das células*/
+    /*text-align: right;   /*Alinhamento do texto a direita*/ 
+    text-align: center;
+    /*vertical-align: top; /*Alinhamento vertical do texto para o top*/
+    /*vertical-align: bottom; /*Alinhamento vertical do texto para parte de baixo*/
+    vertical-align: middle; /*Alinhamento vertical do texto para parte do meio*/
+}
+
+/*Formatação do corpo da página*/
 aside#lateral{
     display: block;
     width: 400px;

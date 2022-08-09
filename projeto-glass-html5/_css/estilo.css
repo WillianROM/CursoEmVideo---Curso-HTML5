@@ -37,6 +37,7 @@ header#cabecalho img#icone{
     top: 80px;
 }
 
+/*Trabalhando com o cabeçalho*/
 header#cabecalho{
     border-bottom: 1px #606060 double;
     /*border-bottom: Largura da borda em pixels, cor da borda, formato da borda (solid, dashed, dotted, double);*/
@@ -132,4 +133,37 @@ nav#menu a{
 nav#menu a:hover{
     color: white;
     text-decoration: underline;
+}
+
+/* Áreas laterais e rodapé da página*/
+section#corpo{
+    display: block;
+    width: 600px;
+    float: left; /*Para "flutuar" do lado esquerdo da página*/
+    border-right: 1px solid #606060; /*Para colocar uma borda, no caso uma linha vertical do lado direito do 'corpo' da página*/
+    /*border-right: largura, tipo de linha (dotted 'pontilhado', dashed 'riscado' ou solid), cor da linha*/
+    padding-right: 15px; /*Para que a linha criado anteriormente não fique grudado ao texto*/
+}
+
+aside#lateral{
+    display: block;
+    width: 400px;
+    float: right;  /*Para "flutuar" do lado direito da página*/
+}
+
+footer#rodape{
+    clear: both; /*Limpar as configurações de ambos os lados - section#corpo e aside#lateral*/
+    border-top: 1px solid #606060; /*Para colocar uma linha em cima do rodapé*/
+}
+
+footer#rodape > p{
+    text-align: center; /*Para centralizar o texto no centro da página, na parte footer*/
+    margin-bottom: 0px;
+}
+
+footer#rodape p a{
+    text-decoration: none; /*Para tirar o underline de links*/
+    font-family: 'FonteLogo', sans-serif;
+    text-transform: uppercase;
+    color: rgb(78, 78, 177);
 }

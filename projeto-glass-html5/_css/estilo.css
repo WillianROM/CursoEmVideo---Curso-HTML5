@@ -12,15 +12,28 @@ p{
     text-align: justify;
     text-indent: 50px;
 }
+
+
+a{
+    color: #606060;
+    text-indent: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+
 body{
-    background-color: rgba(110, 121, 146, 0.5);
+    font-family: Arial, sans-serif;
+    background-color: rgba(209, 226, 228, 0.952);
     color: rgba(0,0,0,0.0.8);
 }
 
 /*Interface*/
 div#interface{
     width: 1040px;
-    background-color: rgb(227, 226, 235);
+    background-color: rgb(232, 241, 239);
     margin: -20px auto 0px auto; /*Margin é a aréa externa do objeto*/
     /*margin: 10px (Em cima) 10px (Direita) 10px (Baixo) 10px (Esquerda);*/
     /*auto: será ajustado automaticamente*/
@@ -145,6 +158,48 @@ section#corpo{
     padding-right: 15px; /*Para que a linha criado anteriormente não fique grudado ao texto*/
 }
 
+
+/*Formatar o artigo*/
+article#noticia-principal h2{
+    font-size: 13pt;
+    color: #606060; /*Cinza escuro*/
+    background-color: #dddddd; /*Cinza mais claro*/
+    padding: 5px /*a cima*/ 0px /*a direita*/ 5px /*em baixo*/ 10px /*a esquerda*/;
+    margin: 10px /*a cima*/ 0px /*a direita*/ 10px /*em baixo*/ 0px /*a esquerda*/;
+    text-align: center;
+}
+
+
+header#cabecalho-artigo h1{
+    text-align: left;
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060; /*Cinza escuro*/
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+header#cabecalho-artigo h2{
+    text-align: left;
+    font-size: 13pt;
+    color: #cecece; /*Cinza mais claro*/
+    background-color:  rgb(232, 241, 239);
+    margin: 0px;
+}
+
+header#cabecalho-artigo h3{
+    
+    font-size: 12px;
+    color: #606060; /*Cinza mais escuro*/
+
+}
+
+.direita{
+    text-align: right;
+}
+
+
+
 /*Formatação da TABELA*/
 table#tabelaspec{
     border: 1px solid #606060;/*Cor da fonte, cinza mais forte*/
@@ -196,7 +251,26 @@ aside#lateral{
     display: block;
     width: 400px;
     float: right;  /*Para "flutuar" do lado direito da página*/
+    background-color: #dddddd; /*cinza mais claro*/
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px /*deslocamento lateral*/ 2px /*deslocamento vertical*/ 2px /*espalhamento*/ rgba(0,0,0,.5) /*cor* preto com 50% alfa - transparência*/;
 }
+
+aside#lateral h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060; /*Cinza mais escuro*/
+    margin-top: 0px;
+}
+
+aside#lateral h2{
+    background-color: #606060; /*Cinza mais escuro*/
+    font-size: 13pt;
+    color: white;
+    padding: 5px;
+}
+
 
 footer#rodape{
     clear: both; /*Limpar as configurações de ambos os lados - section#corpo e aside#lateral*/

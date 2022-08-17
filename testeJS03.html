@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acenda a lâmpada</title>
+    <script>
+        /*
+        let quebrada = false;
+
+        function mudaLampada(tipo){
+            if (tipo == 1) {
+                arquivo = "projeto-glass-html5/_imagens/lampada-acesa.jpg";   
+            }
+            if (tipo == 2){
+                arquivo = "projeto-glass-html5/_imagens/lampada-apagada.jpg";
+            }
+            if (tipo == 3){
+                arquivo = "projeto-glass-html5/_imagens/lampada-quebrada.jpg";
+            }
+            if (!quebrada){
+                document.querySelector("#luz").src = arquivo;
+                if (tipo == 3){
+                    quebrada = true;
+                }
+            }
+            
+        }
+        */
+
+        let quebrada = false
+
+        function mudaLampada(tipo){
+            if (!quebrada){
+                document.querySelector("#luz").src = `projeto-glass-html5/_imagens/${tipo}.jpg`
+                if (tipo == 'lampada-quebrada'){
+                    quebrada = true
+                }
+            }
+            
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Acenda a lâmpada</h1>
+    <!--<img id="luz" src="projeto-glass-html5/_imagens/lampada-apagada.jpg" onmousemove="mudaLampada(1)" onmouseout="mudaLampada(2)" onclick="mudaLampada(3)"> -->
+    <!--Foi colocado parâmentos na função, sendo:
+    1 - Lâmpada acesa
+    2 - Lâmpada apagada
+    3 - Lâmpada quebrada
+    -->
+    <img id="luz" src="projeto-glass-html5/_imagens/lampada-apagada.jpg" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')"> 
+</body>
+</html>

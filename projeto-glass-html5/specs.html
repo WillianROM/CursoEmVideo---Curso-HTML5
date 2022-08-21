@@ -49,7 +49,32 @@
                     <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
 
                     <section id="conteudo">
-                        <img src="_imagens/glass-esquema-marcado.jpg" alt="Óculos esquema marcado">
+                        <img src="_imagens/glass-esquema-marcado.jpg" alt="Óculos esquema marcado" usemap="#meumapa"> <!--Coloque o atributo upemap para utilizar o mapa criado na tag map abaixo, mas no nome é necessário colocar # antes do nome-->
+
+                        <!--Criando Mapas de Imagens  que é uma técnica utilizada para criar múltiplos links em uma mesma imagem, criando áreas sensíveis ao clique em imagens para documentos HTML5
+                        Dentro da imagem criada com a tag IMG do HTML5, devemos usar um parâmetro USEMAP. A tag utilizada para criar um mapa de imagem é a tag MAP no HTML5.
+
+                        A tag AREA do HTML5 permite que você defina o formato SHAPE e as coordenadas COORDS. Além disso, utilizaremos o TARGET para indicar o local onde o link será aberto.
+
+                        Os SHAPE compatíveis com mapas MAP em HTML5 são RECT, CIRCLE e POLY.-->
+                        <map name="meumapa"> 
+                            <area shape="rect" coords="179,211,278,249" href="google-glass.html#tela" target="janela" alt="Tela do Google Glass"><!--Todo mapa é composto por área e toda área tem o seu shape definido, daí existe 3 tipos de shape: Retângulos, Círculos e o Poligonal-->
+
+                            <!--Para as coords (coordenadas) utilize algum editor de imagem, em paleta de informações você verá em que parte o cursor está parado-->
+
+                            <!--Usando o shape="rect" Retângulo, primeiro informa as coordenadas do CANTO SUPERIOR ESQUERDO e em seguida as coordenadas do CANTO INFERIOR DIREITO-->
+
+                            <!--O atributo target não venho automaticamente, necessário colocar pois indicar o "alvo", o lugar que será aberto o arquivo do href-->
+                        
+                            <area shape="circle" coords="158,244,14" href="google-glass.html#camera" target="janela" alt="Camera do Google Glass">
+                            <!--Usando o shape="circle" Circulo, primeiro informa as coordenadas do CENTRO da circuferência (os dois primeiros números) e depois o tamanho do RAIO em pixel-->
+
+                            <area shape="circle" coords="76,52,14" href="google-glass.html#gadgets" target="janela" alt="Bateria do Google Glass">
+
+                            <area shape="poly" coords="27,143,82,217,82,252,26,168" href="google-glass.html#sensores" target="janela" alt="Sensores do Google Glass">
+                            <!--Usando o shape="poly" Poligonal, deve informa nas oordenadas cada ponta, o poloigonal pode ter no minimo 3 cantos como um triangulo ou diversos cantos-->
+                        </map>
+
                         <iframe src="google-glass.html" frameborder="0" name="janela" id="frame-spec"  scrolling="no"></iframe> <!--/*para remover o ::-webkit-scrollbar não seu certo o que foi passado na aula, então a solução foi no html dentro do iframe utilizar scrolling="no"*/-->
                     </section>
                 </hgroup>

@@ -15,33 +15,106 @@ ul#album-fotos > li{
     margin: 10px;
     border: 5px solid white;
     background-color: #ffffff; /*Branco*/
-    box-shadow: 1px /*deslocamento lateral*/ 1px /*deslocamento vertical*/ 3px /*espalhamento*/ rgba(0, 0, 0, 0.4) /*cor*/;
+    box-shadow: .2px /*deslocamento lateral*/ 1px /*deslocamento vertical*/ 3px /*espalhamento*/ rgba(0, 0, 0, 0.4) /*cor*/;
+    -webkit-transition: all 1s ease-in; /*Para que efeitos como ZOOM mostratdo em ul#album-fotos > li:hover seja feito de um modo mais suave*/
 }
 
 ul#album-fotos > li > span{
-    opacity: 0;
+    opacity: 0; /*Coloque 0 para o texto ficar oculto e 1 para o texto aparecer*/
+    color: #ffffff; /* branco */
+    text-shadow: 1px 1px 1px #000000; /*preto*/
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 9pt;
+    line-height: 370px; /*Vai fazer a legenda descer para a base da foto*/
+    padding: 5px;
 }
 
+ul#album-fotos > li:hover  /*hover usado para quando passa o mouse por cima do webelement*/ {
+    -webkit-transform: scale(1.5); /*Aqui onde se faz o ZOOM da imagem*/
+}
+
+
+/*Modificando o span*/
+ul#album-fotos > li:hover span{
+    opacity: 1; /*Coloque 0 para o texto ficar oculto e 1 para o texto aparecer*/
+}
+
+
+/*FOTO 01*/
 ul#album-fotos > li#foto01{
     background: url('../_imagens/galeria-01.jpg') no-repeat;
+    background-position: 50% 50%; /*Deixa a imagem mostrando a respectiva posição central*/
+    background-size: 400px 400px;
+    background-color: #ffffff;
 }
 
+ul#album-fotos > li#foto01:hover{ /*Para mostrar a foto completa quando o pause passa por cima (NÂO é referente ao ZOOM da imagem)*/
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+/*FOTO 02*/
 ul#album-fotos > li#foto02{
     background: url('../_imagens/galeria-02.jpg') no-repeat;
+    background-position: 50% 50%; /*Deixa a imagem mostrando a respectiva posição central*/
+    background-size: 400px 400px;
+    background-color: #ffffff;
 }
 
+ul#album-fotos > li#foto02:hover{ /*Para mostrar a foto completa quando o pause passa por cima (NÂO é referente ao ZOOM da imagem)*/
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+/*FOTO 03*/
 ul#album-fotos > li#foto03{
     background: url('../_imagens/galeria-03.jpg') no-repeat;
+    background-position: 50% 50%; /*Deixa a imagem mostrando a respectiva posição central*/
+    background-size: 400px 400px;
+    background-color: #ffffff;
 }
 
+ul#album-fotos > li#foto03:hover{ /*Para mostrar a foto completa quando o pause passa por cima (NÂO é referente ao ZOOM da imagem)*/
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+/*FOTO 04*/
 ul#album-fotos > li#foto04{
     background: url('../_imagens/galeria-04.jpg') no-repeat;
+    background-position: 50% 50%; /*Deixa a imagem mostrando a respectiva posição central*/
+    background-size: 400px 400px;
+    background-color: #ffffff;
 }
 
+ul#album-fotos > li#foto04:hover{ /*Para mostrar a foto completa quando o pause passa por cima (NÂO é referente ao ZOOM da imagem)*/
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+/*FOTO 05*/
 ul#album-fotos > li#foto05{
     background: url('../_imagens/galeria-05.jpg') no-repeat;
+    background-position: 50% 50%; /*Deixa a imagem mostrando a respectiva posição central*/
+    background-size: 400px 400px;
+    background-color: #ffffff;
 }
 
+ul#album-fotos > li#foto05:hover{ /*Para mostrar a foto completa quando o pause passa por cima (NÂO é referente ao ZOOM da imagem)*/
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+/*FOTO 06*/
 ul#album-fotos >li#foto06{
     background: url('../_imagens/galeria-06.jpg') no-repeat;
+    background-position: 50% 50%; /*Deixa a imagem mostrando a respectiva posição central*/
+    background-size: 400px 400px;
+    background-color: #ffffff;
 }
+
+ul#album-fotos > li#foto06:hover{ /*Para mostrar a foto completa quando o pause passa por cima (NÂO é referente ao ZOOM da imagem)*/
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+

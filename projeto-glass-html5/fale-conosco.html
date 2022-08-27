@@ -48,10 +48,13 @@
             </hgroup>
 
 
-                <form action=""> <!--tag form é usado para fazer um formulário-->
+                <form method="post" id="fContato" action="DadosFormulario.xlsx"> <!--tag form é usado para fazer um formulário--><!--O atributo action determina o local para onde os dados serão enviados-->
+                    <!--Método GET é mais rápido, porém é menos seguro-->
+                    <!--Método POST é um mais mais lento, porém é mais seguro-->
                     <fieldset id="usuario"> <!--fieldset é conjunto de campos-->
                         <legend>Identificação do Usuário</legend> <!--Legendas dos campos do formuário-->
-                            <p><label for="cNome">Nome:</label>
+                            <p>
+                                <label for="cNome">Nome:</label>
                                 <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo">
                                 <!--O atributo "size" para determinar a quantidade de caracteres visíveis, mas não limita a quantidade de caracteres qye podem ser digitados, para limitar a quantidade de caracteres que podem ser digitados use o atributo "maxlength"-->  
                             </p>
@@ -70,27 +73,91 @@
                                     <input type="radio" name="tSexo" id="cFemi">
                                         <label for="cFemi">Feminino</label>
                             </fieldset>
-                            <p><label for="cNasc">Data de Nascimento:</label>
+                            <p>
+                                <label for="cNasc">Data de Nascimento:</label>
                                 <input type="date" name="tNasc" id="cNasc"><!--o atributo type="date" já será o calendário para o usuário escolher a data-->
                             </p>
                     </fieldset>
 
                     <fieldset id="endereco">
                         <legend>Endereço do Usuário</legend>
-                            <p><label for="cRua">Logradouro:</label>
+                            <p>
+                                <label for="cRua">Logradouro:</label>
                                 <input type="text" name="tRua" id="cRua" placeholder="Digite o endereço" size="14" maxlength="80">
                             </p>
-                            <p><label for="cNum">Número:</label>
+                            <p>
+                                <label for="cNum">Número:</label>
                                 <input type="number" name="tNum" id="cNum" placeholder="Número" min="0" max="99999">
                             </p>
-                            <p>Estado:</p>
-                            <p>Cidade:</p>
+                            <p>
+                                <label for="cEst">Estado:</label>
+                                <select name="tEst" id="cEst">
+                                    <option selected value="Sel">Selecione</option> <!--Se quiser deixar uma opção como padrão, adcione o atributo selected-->
+
+
+                                    <optgroup label="Centro-oeste">
+                                        <option value="DF">DF</option>
+                                        <option value="MS">MS</option>
+                                        <option value="MT">MT</option>
+                                        <option value="GO">GO</option>
+                                    </optgroup>
+                                    <optgroup label="Nordeste">
+                                        <option value="AL">AL</option>
+                                        <option value="BA">BA</option>
+                                        <option value="CE">CE</option>
+                                        <option value="MA">MA</option>
+                                        <option value="PB">PB</option>
+                                        <option value="PE">PE</option>
+                                        <option value="PI">PI</option>
+                                        <option value="RN">RN</option>
+                                        <option value="SE">SE</option>
+                                    </optgroup>
+                                    <optgroup label="Norte">
+                                        <option value="AC">AC</option>
+                                        <option value="AM">AM</option>
+                                        <option value="AP">AP</option>
+                                        <option value="PA">PA</option>
+                                        <option value="RO">RO</option>
+                                        <option value="RR">RR</option>
+                                        <option value="TO">TO</option>
+                                    </optgroup>
+                                    <optgroup label="Sudeste">
+                                        <option value="ES">ES</option>
+                                        <option value="MG">MG</option>
+                                        <option value="RJ">RJ</option>
+                                        <option value="SP">SP</option>
+                                    </optgroup>
+                                    <optgroup label="Sul">
+                                        <option value="PR">PR</option>
+                                        <option value="RS">RS</option>
+                                        <option value="SC">SC</option>
+                                    </optgroup>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="cCid">Cidade:</label>
+                                <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades">
+                                <datalist id="cidades"> <!--Autocomplemento das palavras digitadas, no caso nomes de algumas cidades-->
+                                    <option value="Curitiba"></option>
+                                    <option value="Florianopólis"></option>
+                                    <option value="Palmas"></option>
+                                    <option value="Porto Alegre"></option>
+                                    <option value="Rio de Janeiro"></option>
+                                    <option value="São Paulo"></option>                                   
+                                </datalist>
+                            </p>
                     </fieldset>
 
                     <fieldset id="mensagem">
                         <legend>Mensagem do Usuário</legend>
-                            <p>Grau de Urgência:</p>
-                            <p>Mensagem:</p>
+                            <p>
+                                <label for="cUrg">Grau de Urgência:</label>
+                                Min<input type="range" name="tUrg" id="cUrg"" min="0" max="10" step="2">Máx <!--range, é um objeto que você pode arrastar para a esquerda ou para a direita-->
+                            </p>
+                            <p>
+                                <label for="cMsg">Mensagem:</label>
+                                <textarea name="tMsg" id="cMsg" cols="45" rows="10" placeholder="Deixe aqui a sua mensagem"></textarea> <!--textarea são objetos de caixa de texto maior que uma caixa input-->
+                            </p>
                     </fieldset>
 
                     <fieldset id="pedido">

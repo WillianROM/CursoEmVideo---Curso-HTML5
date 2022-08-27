@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tudo sobre Google Glass</title>
     <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css/form.css">
     
     <script language="javascript" src="_javascript/funcoes.js"></script>
     
@@ -38,40 +39,72 @@
                 </ul>
             </nav>
         </header>
-
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
-
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
-
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
-
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
-
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+        <article>
+            <hgroup>
+               <h3>Fale Conosco > &nbsp; &nbsp; Contato</h3>
+                <h1>Formulário de Contato</h1>
+                <h2>por Gustavo Guanabara</h2>
+                <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+            </hgroup>
 
 
-[BOTÃO ENVIAR]
+                <form action=""> <!--tag form é usado para fazer um formulário-->
+                    <fieldset id="usuario"> <!--fieldset é conjunto de campos-->
+                        <legend>Identificação do Usuário</legend> <!--Legendas dos campos do formuário-->
+                            <p><label for="cNome">Nome:</label>
+                                <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo">
+                                <!--O atributo "size" para determinar a quantidade de caracteres visíveis, mas não limita a quantidade de caracteres qye podem ser digitados, para limitar a quantidade de caracteres que podem ser digitados use o atributo "maxlength"-->  
+                            </p>
+                            <p><label for="cSenha">Senha:</label>
+                                <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos">
+                            </p>
+                            <p><label for="cMail">E-mail:</label>
+                                <input type="email" name="tMail" id="cMail" size="20" maxlength="40" placeholder="Digite o e-mail">
+                            </p>
+                            <fieldset id="sexo">
+                                <legend>Sexo:</legend> <!--Dentro do mesmo grupo do objeto radiobutton devem ter o mesmo name-->
+                                    <input type="radio" name="tSexo" id="cMasc" checked>
+                                        <label for="cMasc">Masculino</label>
+                                        <!--labels são usado para referência um objeto ao id de outro objeto, para isso é informado o id do outro objeto dentro do atributo "for" nesse caso é utilizado para quando o usuário clicar na palavra Masculino ou no Feminino, o respectivo radiobutton será marcado/selecionado--><br>
+                                        <!--"checked" usado para deixar o radiobutton já marcado por padrão-->
+                                    <input type="radio" name="tSexo" id="cFemi">
+                                        <label for="cFemi">Feminino</label>
+                            </fieldset>
+                            <p><label for="cNasc">Data de Nascimento:</label>
+                                <input type="date" name="tNasc" id="cNasc"><!--o atributo type="date" já será o calendário para o usuário escolher a data-->
+                            </p>
+                    </fieldset>
 
+                    <fieldset id="endereco">
+                        <legend>Endereço do Usuário</legend>
+                            <p><label for="cRua">Logradouro:</label>
+                                <input type="text" name="tRua" id="cRua" placeholder="Digite o endereço" size="14" maxlength="80">
+                            </p>
+                            <p><label for="cNum">Número:</label>
+                                <input type="number" name="tNum" id="cNum" placeholder="Número" min="0" max="99999">
+                            </p>
+                            <p>Estado:</p>
+                            <p>Cidade:</p>
+                    </fieldset>
+
+                    <fieldset id="mensagem">
+                        <legend>Mensagem do Usuário</legend>
+                            <p>Grau de Urgência:</p>
+                            <p>Mensagem:</p>
+                    </fieldset>
+
+                    <fieldset id="pedido">
+                        <legend>Quero um Google Glass</legend>
+                            <p>Gostaria de adquirir um Google Glass quando disponível</p>
+                            <p>Cor:</p>
+                            <p>Quantidade:</p>
+                            <p>Preço Total: R$</p>
+                        
+                    </fieldset>
+                    [BOTÃO ENVIAR]
+                </form>
+
+        </article>
 <footer id="rodape">
     <p>Copyright &copy; 2013 - by Gustavo Guanabara</p>
     <p> <a href="http://facebook.com/cursosemvideo" target="_blank">Facebook</a> | 

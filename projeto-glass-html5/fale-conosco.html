@@ -10,6 +10,13 @@
     <link rel="stylesheet" type="text/css" href="_css/form.css">
     
     <script language="javascript" src="_javascript/funcoes.js"></script>
+    <script>
+        function calcTotal(){
+            let qtd = Number(document.querySelector('#cQtd').value)
+            tot = qtd * 1500
+            document.querySelector('#cTot').value = tot
+        }
+    </script>
     
 </head>
 
@@ -48,7 +55,7 @@
             </hgroup>
 
 
-                <form method="post" id="fContato" action="DadosFormulario.xlsx"> <!--tag form é usado para fazer um formulário--><!--O atributo action determina o local para onde os dados serão enviados-->
+                <form method="post" id="fContato" action="DadosFormulario.xlsx" oninput="calcTotal()"> <!--tag form é usado para fazer um formulário--><!--O atributo action determina o local para onde os dados serão enviados-->
                     <!--Método GET é mais rápido, porém é menos seguro-->
                     <!--Método POST é um mais mais lento, porém é mais seguro-->
                     <fieldset id="usuario"> <!--fieldset é conjunto de campos-->
@@ -156,19 +163,35 @@
                             </p>
                             <p>
                                 <label for="cMsg">Mensagem:</label>
-                                <textarea name="tMsg" id="cMsg" cols="45" rows="10" placeholder="Deixe aqui a sua mensagem"></textarea> <!--textarea são objetos de caixa de texto maior que uma caixa input-->
+                                <textarea name="tMsg" id="cMsg" cols="35" rows="10" placeholder="Deixe aqui a sua mensagem"></textarea> <!--textarea são objetos de caixa de texto maior que uma caixa input-->
                             </p>
                     </fieldset>
 
                     <fieldset id="pedido">
                         <legend>Quero um Google Glass</legend>
-                            <p>Gostaria de adquirir um Google Glass quando disponível</p>
-                            <p>Cor:</p>
-                            <p>Quantidade:</p>
-                            <p>Preço Total: R$</p>
+                            <p>
+                                <input type="checkbox" name="cPed" id="cPed" checked><!--Checkobox é a caixa quadrada para selecionar-->
+                                <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label>
+                            </p>
+                            <p>
+                                <label for="cCor">Cor:</label>
+                                <input type="color" name="tCor" id="cCor" value="#0000FF"><!--value="#0000FF" - AZUL-->
+                            </p>
+                            <p>
+                                <label for="cQtd">Quantidade:</label>
+                                <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0">
+                            </p>
+                            <p>
+                                <label for="cTot">Preço Total: R$</label>
+                                <input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly> <!--readonly é somente leitura, para o usuário não poder digitar dentro do campo-->
+                            </p>
                         
                     </fieldset>
-                    [BOTÃO ENVIAR]
+                    <!--Formas de criar botões-->
+                   <!-- <input type="submit" value="Enviar"> --><!--Botão usando o type submit do input-->
+                    <input type="image" src="_imagens/botao-enviar.png" name="tEnviar"> <!--Colocando uma imagem-->
+                   <!-- <button>Enviar</button> --><!--Utilizando a tag button-->
+    
                 </form>
 
         </article>
